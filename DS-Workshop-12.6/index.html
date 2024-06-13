@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME HAVEN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HOME HAVEN</h1>
+        <h2>Transforming Houses into Homes</h2>
+        <img src='logo.jpg'></img>
+        <label for="action-select">Choose:</label>
+        <select id="action-select" onchange="handleActionChange()">
+            <option value="" selected disabled>Select an option</option>
+            <option value="insert">Insert</option>
+            <option value="retrieve">Retrieve</option>
+        </select>
+
+        <div id="insert-form" class="form-section">
+            <h2>Insert Product</h2>
+            <label for="product-id">ID:</label>
+            <input type="text" id="product-id" name="product-id">
+            <label for="product-name">Name:</label>
+            <input type="text" id="product-name" name="product-name">
+            <label for="product-price">Price:</label>
+            <input type="text" id="product-price" name="product-price">
+            <label for="product-stock">Stock:</label>
+            <input type="text" id="product-stock" name="product-stock">
+            <button onclick="submitProduct()">Submit</button>
+        </div>
+
+        <div id="retrieve-options" class="form-section">
+            <h2>Retrieve Data</h2>
+            <button onclick="retrieveAllProducts()">All Products Available</button>
+            <button onclick="retrieveAllOrders()">All Orders</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
